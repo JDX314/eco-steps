@@ -1,0 +1,608 @@
+{
+    "openapi": "3.0.0",
+    "info": { "title": "School Project APIs", "contact": {}, "version": "v1" },
+    "servers": [
+        {
+            "url": "http://localhost:3001/school/v1/api",
+            "description": "Local"
+        }
+    ],
+    "security": [{ "Authorization": [], "token": [] }],
+    "tags": [],
+    "paths": {
+        "/user/register": {
+            "post": {
+                "tags": ["General APIs"],
+                "summary": "Register",
+                "operationId": "Register",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RegisterDataRequest"
+                            },
+                            "example": {
+                                "first_name": "Jhon",
+                                "last_name": "Peter",
+                                "email": "jhon@gmail.com",
+                                "password": "jhon123",
+                                "city": "Lagos"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/login": {
+            "post": {
+                "tags": ["General APIs"],
+                "summary": "Login",
+                "operationId": "Login",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LoginDataRequest"
+                            },
+                            "example": {
+                                "email": "jhon@gmail.com",
+                                "password": "jhon123"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/forgot-password": {
+            "post": {
+                "tags": ["General APIs"],
+                "summary": "Forgot Password",
+                "operationId": "Forgot Password",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ForgotPasswordDataRequest"
+                            },
+                            "example": {
+                                "email": "jhon@gmail.com"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/reset-password": {
+            "post": {
+                "tags": ["General APIs"],
+                "summary": "Reset Password",
+                "operationId": "Reset Password",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResetPasswordDataRequest"
+                            },
+                            "example": {
+                                "email": "jhon@gmail.com",
+                                "otp": "ABCD",
+                                "password": "jhon123"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/profile": {
+            "get": {
+                "tags": ["Profile APIs"],
+                "summary": "Profile",
+                "operationId": "Profile",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            },
+            "patch":  {
+                "tags": ["Profile APIs"],
+                "summary": "Update Profile",
+                "operationId": "Update Profile",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateProfileDataRequest"
+                            },
+                            "example": {
+                                "first_name": "Jhon",
+                                "last_name": "Peter",
+                                "city": "Lagos"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/eco-challenge": {
+            "post": {
+                "tags": ["Eco Challenge APIs"],
+                "summary": "Eco Challenge",
+                "operationId": "Eco Challenge",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/EcoChallengeDataRequest"
+                            },
+                            "example": {
+                                "transportation": false,
+                                "energy_consuption": false,
+                                "diet": false,
+                                "household_size": false,
+                                "waste_generated": false,
+                                "total_points": 0
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": ["Eco Challenge APIs"],
+                "summary": "Eco Challenge",
+                "operationId": "Eco Challenge",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/green-points": {
+            "post": {
+                "tags": ["Green Points APIs"],
+                "summary": "Green Points",
+                "operationId": "Green Points",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GreenPointsDataRequest"
+                            },
+                            "example": {
+                                "reward_points": 20
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": ["Green Points APIs"],
+                "summary": "Green Points",
+                "operationId": "Green Points",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/green-points/history": {
+            "get": {
+                "tags": ["Green Points APIs"],
+                "summary": "Green Points",
+                "operationId": "Green Points",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/carbon-footprint": {
+            "post": {
+                "tags": ["Carbon Footprint APIs"],
+                "summary": "Carbon Footprint",
+                "operationId": "Carbon Footprint",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CarbonFootprintDataRequest"
+                            },
+                            "example": {
+                                "transportation": 1200,
+                                "energy_consuption": 1200,
+                                "diet": 1200,
+                                "household_size": 1200,
+                                "waste_generated": 1200,
+                                "carbon_emission": 45000,
+                                "carbon_footprint_score": "low",
+                                "category": "string",
+                                "comments": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": ["Carbon Footprint APIs"],
+                "summary": "Carbon Footprint",
+                "operationId": "Carbon Footprint",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/green-events": {
+            "post": {
+                "tags": ["Green Events APIs"],
+                "summary": "Green Events",
+                "operationId": "Green Events",
+                "parameters": [],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GreenEventsDataRequest"
+                            },
+                            "example": {
+                                "city": "string",
+                                "event_name": "string",
+                                "event_details": "string"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            },
+            "get": {
+                "tags": ["Green Events APIs"],
+                "summary": "Green Events",
+                "operationId": "Green Events",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/user/leader-board": {
+            "get": {
+                "tags": ["Leader board APIs"],
+                "summary": "Leader board",
+                "operationId": "Leader board",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "RegisterDataRequest": {
+                "title": "RegisterDataRequest",
+                "required": ["first_name", "last_name", "email", "password", "city"],
+                "type": "object",
+                "properties": {
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "first_name": "Jhon",
+                    "last_name": "Peter",
+                    "email": "jhon@gmail.com",
+                    "password": "jhon123",
+                    "city": "Lagos"
+                }
+            },
+            "LoginDataRequest": {
+                "title": "LoginDataRequest",
+                "required": ["email", "password"],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "email": "jhon@gmail.com",
+                    "password": "jhon123"
+                }
+            },
+            "ForgotPasswordDataRequest": {
+                "title": "ForgotPasswordDataRequest",
+                "required": ["email"],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "email": "jhon@gmail.com"
+                }
+            },
+            "ResetPasswordDataRequest": {
+                "title": "ResetPasswordDataRequest",
+                "required": ["email", "otp", "password"],
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "otp": {
+                        "type": "string"
+                    },
+                    "password": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "email": "jhon@gmail.com",
+                    "otp": "ABCD",
+                    "password": "jhon123"
+                }
+            },
+            "UpdateProfileDataRequest": {
+                "title": "UpdateProfileDataRequest",
+                "required": ["first_name", "last_name", "city"],
+                "type": "object",
+                "properties": {
+                    "first_name": {
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "first_name": "Jhon",
+                    "last_name": "Peter",
+                    "city": "Lagos"
+                }
+            },
+            "EcoChallengeDataRequest": {
+                "title": "EcoChallengeDataRequest",
+                "required": [
+                    "transportation", 
+                    "energy_consuption", 
+                    "diet", 
+                    "household_size",
+                    "waste_generated",
+                    "total_points"
+                ],
+                "type": "object",
+                "properties": {
+                    "transportation": {
+                        "type": "boolean"
+                    },
+                    "energy_consuption": {
+                        "type": "boolean"
+                    },
+                    "diet": {
+                        "type": "boolean"
+                    },
+                    "household_size": {
+                        "type": "boolean"
+                    },
+                    "waste_generated": {
+                        "type": "boolean"
+                    },
+                    "total_points": {
+                        "type": "number"
+                    }
+                },
+                "example": {
+                    "transportation": false,
+                    "energy_consuption": false,
+                    "diet": false,
+                    "household_size": false,
+                    "waste_generated": false,
+                    "total_points": 0
+                }
+            },
+            "GreenPointsDataRequest": {
+                "title": "GreenPointsDataRequest",
+                "required": ["reward_points"],
+                "type": "object",
+                "properties": {
+                    "reward_points": {
+                        "type": "number"
+                    }
+                },
+                "example": {
+                    "reward_points": 20
+                }
+            },
+            "CarbonFootprintDataRequest": {
+                "title": "CarbonFootprintDataRequest",
+                "required": [
+                    "transportation",
+                    "energy_consuption",
+                    "diet",
+                    "household_size",
+                    "waste_generated",
+                    "carbon_footprint_score", 
+                    "category", 
+                    "comments"
+                ],
+                "type": "object",
+                "properties": {
+                    "transportation": {
+                        "type": "number"
+                    },
+                    "energy_consuption": {
+                        "type": "number"
+                    },
+                    "diet": {
+                        "type": "number"
+                    },
+                    "household_size": {
+                        "type": "number"
+                    },
+                    "waste_generated": {
+                        "type": "number"
+                    },
+                    "carbon_emission": {
+                        "type": "number"
+                    },
+                    "carbon_footprint_score": {
+                        "type": "string"
+                    },
+                    "category": {
+                        "type": "string"
+                    },
+                    "comments": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "transportation": 1200,
+                    "energy_consuption": 1200,
+                    "diet": 1200,
+                    "household_size": 1200,
+                    "waaste_generated": 1200,
+                    "carbon_emission": 45000,
+                    "carbon_footprint_score": "high",
+                    "category": "string",
+                    "comments": "string"
+                }
+            },
+            "GreenEventsDataRequest": {
+                "title": "GreenEventsDataRequest",
+                "required": ["city", "event_name", "event_details"],
+                "type": "object",
+                "properties": {
+                    "city": {
+                        "type": "string"
+                    },
+                    "event_name": {
+                        "type": "string"
+                    },
+                    "event_details": {
+                        "type": "string"
+                    }
+                },
+                "example": {
+                    "city": "string",
+                    "event_name": "string",
+                    "event_details": "string"
+                }
+            }
+        },
+        "securitySchemes": {
+            "token": {
+                "type": "apiKey",
+                "in": "header",
+                "name": "token"
+            }
+        }
+    }
+}
