@@ -81,10 +81,8 @@ const Dashboard = () => {
         <button className="link" onClick={handleLogout}>Logout</button>
       </div>
       <div className="main-content">
-        <div className="breadcrumb">Home / Dashboard</div>
         <h1>Hello {userData.first_name} {userData.last_name}</h1>
         <h1>Welcome to Your Dashboard!</h1>
-        <p>Here you can access all your personal information and settings.</p>
         <div className="cards">
           <div className="card">
             <div className="card-icon">🌿</div>
@@ -115,8 +113,8 @@ const Dashboard = () => {
             <div className="card-icon">📚</div>
             <div className="card-title">Resource Center</div>
             <div className="card-text">Find the sustainability articles and tips.</div>
-            <Link to="/ResourceCenter">
-              <button className="button">Click here</button>
+            <Link to="/resource-center">
+              <button className="button">Explore</button>
             </Link>             
           </div>
           <div className="card">

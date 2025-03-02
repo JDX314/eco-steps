@@ -43,7 +43,7 @@ const LoginPage = () => {
   return (
     <div className="login-container">
       <div className="login-form">
-        <img src="/images/eco-login-icon.png" alt="Login Icon" className="login-icon" />
+        <img src="/images/logo.png" alt="Login Icon" className="login-icon" />
         <div className="title">Login</div>
         <input type="text" placeholder="Email" className="input-field" name="email" onChange={handleChangeName}/>
         <input type="password" placeholder="Password" className="input-field" name="pwd" onChange={handleChangeName}/>

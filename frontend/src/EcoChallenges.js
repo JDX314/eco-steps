@@ -39,9 +39,7 @@ const EcoChallenges = () => {
         <button className="link" onClick={() => setShowLogoutModal(true)}>Logout</button>
       </div>
       <div className="main-content">
-        <div className="breadcrumb">Home / Eco Challenges</div>
-        <h1>Eco Challenges</h1>
-
+        <h1 className='leaderboard-title'>🌿 Eco Challenges</h1>           
         <form onSubmit={(e) => { e.preventDefault(); handleSubmit(); }}>
           <div className="challenge">
             <p>Transportation: Can you go car-free for a day by walking, biking, or using public transport instead?</p>
@@ -162,12 +160,10 @@ const EcoChallenges = () => {
               No
             </label>
           </div>
-
-          <button type="submit">Submit Responses</button>
-
+          <button type="submit" className="carbon-btn-submit">Submit</button>
           {total_points >= 0 && (
           <div className="carbon-footprint-result">
-            <h2>Your Score is: {total_points}</h2>
+            <h2>Your Green Points: {total_points}</h2>
           </div>
         )}
         </form>

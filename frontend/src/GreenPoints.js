@@ -34,11 +34,7 @@ const GreenPoints = () => {
     <div className="dashboard-container">
         <div className="sidebar">
             <Link to="/profile">Profile</Link>
-            <Link to="/settings">Settings</Link>
             <Link to="/dashboard">Dashboard</Link>
-            <Link to="/eco-challenges">Eco Challenges</Link>
-            <Link to="/carbon-footprint-calculator">Carbon Footprint</Link>
-            <Link to="/green-events">Green Events</Link>
             <button className="link" onClick={handleLogout}>Logout</button>
         </div>
         <div className="main-content">

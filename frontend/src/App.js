@@ -12,6 +12,7 @@ import GreenEvents from './GreenEvents'; // Import the new component
 import EcoChallenges from './EcoChallenges'; // Import the new component
 import LeaderBoard from './LeaderBoard'; // Import the new component
 import GreenPoints from './GreenPoints';
+import ResourceCenter from './ResourceCenter'; // Import the new component
 
 const Home = () => {
   return (
@@ -84,6 +85,7 @@ const App = () => {
         <Route path="/leader-board" element={<LeaderBoard />} />
         <Route path="/green-points" element={<GreenPoints />} />
         <Route path="/eco-challenges" element={<EcoChallenges />} /> {/* Updated route */}
+        <Route path="/resource-center" element={<ResourceCenter />} /> {/* Add this route */}
       </Routes>
     </Router>
   );

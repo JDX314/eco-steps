@@ -39,8 +39,9 @@ body {
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   justify-content: center;
   margin-top: 40px;
 }
@@ -49,10 +50,7 @@ body {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 10px;
   padding: 20px;
-  width: calc(30% - 20px);
-  height: calc(40% - 20px);
   text-align: center;
   box-sizing: border-box;
   display: flex;
@@ -169,7 +167,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%; /* Ensure sidebar extends to the bottom */
+  height: 150%; /* Ensure sidebar extends to the bottom */
 }
 
 .sidebar a, .sidebar button {
@@ -375,4 +373,17 @@ body {
 
 .resources-table tr:nth-child(odd) {
   background-color: #ffffff;
+}
+
+.resources-table tr:hover {
+  background-color: #ddd; /* Add hover effect */
+}
+
+.resources-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.resources-table a:hover {
+  text-decoration: underline;
 }

@@ -110,7 +110,6 @@ const ProfilePage = () => {
     <div className='dashboard-container'>
       <div className='sidebar'>
         <Link to='/profile'>Profile</Link>
-        <Link to='/settings'>Settings</Link>
         <Link to='/dashboard'>Dashboard</Link>
         <button className='link' onClick={handleLogout}>
           Logout

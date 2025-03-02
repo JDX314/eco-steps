@@ -147,8 +147,7 @@ const CarbonFootprintCalculator = () => {
         <button className="link" onClick={handleLogout}>Logout</button>
       </div>
       <div className="main-content">
-        <div className="breadcrumb">Home / Carbon Footprint Calculator</div>
-        <h1>Calculate Your Carbon Footprint</h1>
+        <h1 className='leaderboard-title'>🌿 Calculate Your Carbon Footprint</h1>
         <form onSubmit={handleSubmit} className="carbon-form-container">
           <div className="carbon-form-group">
             <label>Transportation (km per week):</label>
