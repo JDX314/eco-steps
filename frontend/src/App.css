@@ -1,0 +1,389 @@
+/* General styles */
+body {
+  background-color: #e6f7e6;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+.logo {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.title {
+  font-size: 36px;
+  color: #2e7d32;
+  margin-top: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #4caf50;
+}
+
+.button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-icon {
+  font-size: 40px;
+  color: #4caf50;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Login, Signup, Forgot Password, Reset Password, and Profile forms */
+.login-container, .signup-container, .forgot-password-container, .reset-password-container, .profile-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form, .signup-form, .forgot-password-form, .reset-password-form, .profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.login-icon {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.input-field {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 345px;
+}
+
+.password-field input {
+  width: calc(100% - 30px);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.link-container {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #4caf50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.separator {
+  margin: 0 10px;
+  color: #4caf50;
+}
+
+.login-message {
+  color: #4caf50;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.forgot-password-message {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 80%;
+}
+
+.dashboard-container, .profile-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  background-color: #4caf50;
+  color: white;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 150%; /* Ensure sidebar extends to the bottom */
+}
+
+.sidebar a, .sidebar button {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.modal-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+/* Carbon Footprint Calculator styles */
+.carbon-footprint-calculator-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.carbon-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.carbon-form-group label {
+  width: 200px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.carbon-form-group input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.carbon-btn-submit {
+  width: 150px;
+  padding: 8px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.carbon-btn-submit:hover {
+  background-color: #218838;
+}
+
+.carbon-footprint-result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e9f7ef;
+  border-radius: 4px;
+  border: 1px solid #d4edda;
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+/* Green Events styles */
+.events-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 60%; /* Reduced width */
+}
+
+.events-table th, .events-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.events-table th {
+  background-color: #2e7d32; /* Matching green color */
+  color: white;
+}
+
+.events-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.events-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* LeaderBoard styles */
+.leaderboard-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 60%; /* Reduced width */
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.leaderboard-table th {
+  background-color: #2e7d32; /* Matching green color */
+  color: white;
+}
+
+.leaderboard-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.leaderboard-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Resource Center styles */
+.resources-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 60%; /* Reduced width */
+}
+
+.resources-table th, .resources-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.resources-table th {
+  background-color: #2e7d32; /* Matching green color */
+  color: white;
+}
+
+.resources-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.resources-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.resources-table tr:hover {
+  background-color: #ddd; /* Add hover effect */
+}
+
+.resources-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.resources-table a:hover {
+  text-decoration: underline;
+}
