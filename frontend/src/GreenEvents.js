@@ -50,8 +50,7 @@ const GreenEvents = () => {
         <button className="link" onClick={handleLogout}>Logout</button>
       </div>
       <div className="main-content">
-        <div className="breadcrumb">Home / Green Events</div>
-        <h1>Green Events in Your City</h1>
+        <h1 className='leaderboard-title'>🌿 Green Events in Your City</h1>        
         <p>Find local Green Events in your city and participate in sustainable activities!</p>
         {mapsLoaded ? (
           <table className="events-table">
